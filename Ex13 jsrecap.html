@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //checking JS out
+        alert("hey");
+    //destructing
+    //get first 3 into p,q,r
+    let arr=[1,2,3,4,5];
+    let [p,q,,r] = arr;
+        console.log(p,q,r);
+        let obj = {name:"sireesha",
+                    age:45,height:"5'6"}
+        let {name:nam,height} =obj;
+        console.log(nam,height);
+//function
+fun();
+function fun(){
+console.log("hey");
+}
+
+//function expression oe anonymous function with arrow-- does not get hoisted
+let myfun = () => {
+
+    console.log("hello world");
+}
+
+myfun();
+function fun1(a){
+console.log(a);
+console.log(arr);
+}
+fun1(1,2,3,4)
+
+
+let newobj = {name:"sireesha",
+                    age:45,height:"5'6"}
+                    for(key in newobj){
+                        console.log (key+" is"+ newobj[key]+"!"); 
+                    console.log (` the key value pair -
+                ${key} blah blah ${newobj[key]} dummy`);  //template literal. use back tick
+                    }
+                let myarr =[1,2,3,4,5];
+                let mymaparr = myarr.map(something=> something*5);
+                console.log(mymaparr); //map
+                        //get sum of all elements of array
+                let  myreduce = myarr.reduce((sum,elem) => sum+elem );
+                let  myreduceinitial = myarr.reduce((sum,elem) => {return sum+elem},10);
+                console.log(myreduce);
+                console.log(myreduceinitial);
+
+                //filter
+                //all values greater than 3
+                let filteredValues = myarr.filter((elem) => elem>3 );
+                console.log(filteredValues);
+
+        
+                                     
+
+        </script>
+</head>
+<body>
+    <h1> JS</h1>
+
+
+
+</body>
+</html>

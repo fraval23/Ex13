@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    
+<script>
+function changeText(){
+//console.log("clicked");
+//console.log(document.getElementById("mydiv"));
+document.getElementById("mydiv").innerHTML="updated!!"
+}
+function changeBg(){
+document.getElementById("mybgdiv").style.backgroundColor="Blue"
+}
+
+//check if it is display then change to hide
+function showHidediv(){
+ 
+    if(document.getElementById("myhiddendiv").style.display==="none"){
+document.getElementById("myhiddendiv").style.display="block";
+}
+else {
+    document.getElementById("myhiddendiv").style.display="none";
+    document.getElementById("toggleButton").textContent="Show";
+}
+}
+
+</script>
+</head>
+<body>
+    
+<!--changes text-->
+<h1> JS to HTML</h1>
+<div id="mydiv">The content here should change</div>
+<button onclick="changeText()">  Click to Change</button>
+
+<!--changes bgcolor-->
+<div id='mybgdiv'>Background color should change</div>
+<button onclick="changeBg()"> Change bgcolor</button><br>
+
+<!-- show hide div-->
+<div id="myhiddendiv">Should disappear and appear on  button click</div>
+<!--<button id="togglebutton"> Show Hide Div Above</button>-->
+<button id="toggleButton" onclick="showHidediv()"> Hide</button>
+
+
+</body>
+</html>
